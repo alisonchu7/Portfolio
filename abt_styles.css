@@ -1,0 +1,82 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden; /* Prevent the body from scrolling */
+}
+
+.border-container {
+    height: 100vh; /* Full height of the viewport */
+    width: 100%;
+    border: 23px solid;
+    border-image: linear-gradient(90deg,   #e9ff6b, #41a0ff ) 1;
+    box-sizing: border-box;
+    overflow-y: auto; /* Allow scrolling inside the border-container */
+    position: relative;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(148, 201, 255));
+    z-index: -1; /* Send the background behind the other elements */
+}
+
+.navbar {
+    position: relative;
+    z-index: 3; /* Ensure the navbar stays above other elements */
+}
+
+.about-text, .recent-experience, .environment, .ending {
+    font-family: 'Hedvig Letters Sans', sans-serif;
+    color: black;
+    font-size: 15px;
+    text-align: left; /* Align text to the left */
+    padding: 10px;
+    box-sizing: border-box;
+    max-width: 1500px; /* Increase the max-width for more horizontal space */
+    margin-left: 40px;
+    margin-top: 30px;
+    position: relative;
+    z-index: 1; /* Position the text above the background */
+}
+
+
+#canvas1 {
+    width: calc(100% - 46px); /* Adjust width to account for the border */
+    height: calc(100% - 83px); /* Adjust height to account for the border and navbar */
+    position: absolute;
+    top: calc(60px + 23px); /* Position the canvas below the navbar and account for the border */
+    left: 23px; /* Position the canvas inside the left border */
+    z-index: 2; /* Position the canvas above the background */
+    background: transparent; /* Make the canvas background transparent */
+    overflow: hidden;
+}
+
+.navbar-menu {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.navbar-links {
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Hedvig Letters Sans", sans-serif;
+    color: black;
+}
+
+.navbar-item {
+    padding: 20px;
+    padding-bottom: 20px;
+
+}
+
+

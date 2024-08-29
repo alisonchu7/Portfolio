@@ -1,0 +1,85 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.border-container {
+    height: 100%;
+    width: 100%;
+    border: 23px solid;
+    border-image: linear-gradient(90deg, #e9ff6b, #41a0ff) 1;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Ensure that content flows vertically */
+}
+
+.navbar-menu {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.navbar-links {
+    text-decoration: none; /*remove underline from links*/
+    font-size: 20px;
+    font-family: "Hedvig Letters Sans", sans-serif;
+    color: black;
+}
+
+.navbar-item {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Reduced gap between project rows */
+    padding: 15px; /* Reduced padding */
+}
+
+.project-row {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Reduced gap between project tiles and descriptions */
+}
+
+.project-tile {
+    background-color: #f0f0f0;
+    padding: 15px; /* Reduced padding inside the project tiles */
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    flex: 0 0 180px; /* Reduced width for the tiles */
+}
+
+.project-tile h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px; /* Reduced font size for project titles */
+    margin-bottom: 8px; /* Reduced margin below the title */
+}
+
+.project-tile .code-link {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px; /* Reduced font size for code link */
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 8px; /* Reduced margin above the link */
+}
+
+.project-tile:hover {
+    transform: translateY(-4px); /* Slightly reduced hover effect */
+}
+
+.project-description {
+    flex: 1;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px; /* Reduced font size for descriptions */
+}

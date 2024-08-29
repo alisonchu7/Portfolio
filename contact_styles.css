@@ -1,0 +1,103 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.border-container {
+    height: 100%;
+    width: 100%;
+    border: 23px solid;
+    border-image: linear-gradient(90deg, #e9ff6b, #41a0ff) 1;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Ensure that content flows vertically */
+}
+
+.navbar-menu {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.navbar-links {
+    text-decoration: none; /*remove underline from links*/
+    font-size: 20px;
+    font-family: "Hedvig Letters Sans", sans-serif;
+    color: black;
+}
+
+.navbar-item {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.contact-info {
+    flex-grow: 1; /* Makes contact-info expand to fill available space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centers content vertically */
+    background-color: white;
+    background-image: radial-gradient(lightgrey 15%, transparent 20%), radial-gradient(lightgrey 15%, transparent 20%);
+    background-position: 0 0, 50px 50px;
+    background-size: 20px 20px; /* Adjust the size of the polka dots */
+    padding: 20px; /* Add padding so that content doesn’t touch the border */
+    box-sizing: border-box;
+}
+
+.contact-info h2 {
+    margin-top: 0; /* Reset the margin to avoid extra space */
+    font-family: "Borel", Poppins;
+    font-size: 60px;
+    font-style: italic;
+    display: flex;
+    justify-content: center; 
+    margin-bottom: 0;
+}
+
+.contact-info a {
+    color: black; /* Default text color */
+    text-decoration: none; /* Ensure no underline by default */
+    font-family: "Hedvig Letters Sans", sans-serif;
+    font-size: 30px;
+    transition: color 200ms linear; /* Smooth transition for text color */
+}
+
+.contact-info svg {
+    width: 24px; /* Adjust size of icons */
+    height: 24px; /* Adjust size of icons */
+    margin-right: 8px; /* Space between icon and text */
+}
+
+.contact-info a:hover {
+    background-image: -webkit-linear-gradient(left, rgb(0, 0, 0) 25%, #ff3737 37.5%, #e9ff6b, #41a0ff 62.5%, rgb(0, 0, 0) 75%);
+    background-image: linear-gradient(90deg, rgb(0, 0, 0) 25%, #ff3737 37.5%, #e9ff6b, #41a0ff 62.5%, rgb(0, 0, 0) 75%);
+    background-size: 400% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent; /* Makes the text transparent so the gradient shows through */
+    background-position: 0% 50%; /* Initial gradient position */
+    transition: background-position 2000ms ease-out; /* Smooth gradient transition */
+}
+
+.contact-info a:hover {
+    background-position: 100% 50%; /* Move gradient across the text on hover */
+}
+
+.home-button {
+    font-size: 16px; /* Adjusts the font size */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    padding: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-family: "Hedvig Letters Sans", sans-serif;
+    border-radius: 34px;
+    border: 2px solid #7ed957;
+    margin: 10px;
+    background-color: white;
+}
