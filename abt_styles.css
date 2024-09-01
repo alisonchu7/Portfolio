@@ -10,7 +10,7 @@ html, body {
     height: 100vh; /* Full height of the viewport */
     width: 100%;
     border: 23px solid;
-    border-image: linear-gradient(90deg,   #e9ff6b, #41a0ff ) 1;
+    border-image: linear-gradient(90deg, #e9ff6b, #41a0ff) 1;
     box-sizing: border-box;
     overflow-y: auto; /* Allow scrolling inside the border-container */
     position: relative;
@@ -31,6 +31,20 @@ html, body {
     z-index: 3; /* Ensure the navbar stays above other elements */
 }
 
+.about-container {
+    display: flex; /* Flexbox layout for the main container */
+    justify-content: space-between; /* Space between the text and images */
+    padding: 20px;
+    align-items: flex-start; /* Align items at the top of the container */
+}
+
+.about-content {
+    max-width: 60%; /* Set the width of the text section */
+    padding-right: 20px;
+    box-sizing: border-box;
+    margin-top: 0; /* Remove top margin to align with image collage */
+}
+
 .about-text, .recent-experience, .environment, .ending {
     font-family: 'Hedvig Letters Sans', sans-serif;
     color: black;
@@ -38,23 +52,26 @@ html, body {
     text-align: left; /* Align text to the left */
     padding: 10px;
     box-sizing: border-box;
-    max-width: 1500px; /* Increase the max-width for more horizontal space */
-    margin-left: 40px;
-    margin-top: 30px;
-    position: relative;
-    z-index: 1; /* Position the text above the background */
+    margin-top: 0; /* Remove margin to align with the image collage */
 }
 
+.image-collage {
+    max-width: 35%; /* Set the width of the image section */
+    height: 500px; /* Set a fixed height for the collage section */
+    overflow-y: auto; /* Enable vertical scrolling within the collage */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2-column grid for images */
+    grid-gap: 10px; /* Space between images */
+    padding-right: 10px; /* Padding to avoid clipping the scrollbar */
+    box-sizing: border-box;
+    margin-top: 0; /* Ensure no margin so it aligns with the text section */
+}
 
-#canvas1 {
-    width: calc(100% - 46px); /* Adjust width to account for the border */
-    height: calc(100% - 83px); /* Adjust height to account for the border and navbar */
-    position: absolute;
-    top: calc(60px + 23px); /* Position the canvas below the navbar and account for the border */
-    left: 23px; /* Position the canvas inside the left border */
-    z-index: 2; /* Position the canvas above the background */
-    background: transparent; /* Make the canvas background transparent */
-    overflow: hidden;
+.image-collage img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover; /* Ensure images cover their grid areas */
 }
 
 .navbar-menu {
@@ -75,8 +92,20 @@ html, body {
 
 .navbar-item {
     padding: 20px;
-    padding-bottom: 20px;
-
 }
 
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Stack content vertically on smaller screens */
+    }
 
+    .about-content, .image-collage {
+        max-width: 100%; /* Full width for each section */
+        margin-bottom: 20px; /* Space between sections */
+    }
+
+    .image-collage {
+        height: 300px; /* Adjust the height for smaller screens */
+        grid-template-columns: 1fr 1fr; /* 2-column grid on smaller screens */
+    }
+}
